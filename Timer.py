@@ -189,7 +189,19 @@ class MainWindow(QtWidgets.QWidget):
         self.reset_btn.clicked.connect(self.reset_history)
         self.input_edit.returnPressed.connect(self.start_timer)
 
+        # 添加右下角署名
+        self.signature_label = QtWidgets.QLabel("by:cangshui.net", self)
+        self.signature_label.setAlignment(Qt.AlignRight | Qt.AlignBottom)
+        self.signature_font_size = 10
+        self.signature_label.setStyleSheet(f"color:gray; font-size:{self.signature_font_size}pt;")
+        layout.addWidget(self.signature_label)
+
         self.load_history()
+
+    def set_signature_font_size(self, size: int):
+        """调节右下角署名字体大小"""
+        self.signature_font_size = size
+        self.signature_label.setStyleSheet(f"color:gray; font-size:{self.signature_font_size}pt;")
 
     def load_history(self):
         self.history_list.clear()
@@ -257,6 +269,8 @@ def main():
     state = load_state()
     win = MainWindow(state)
     win.show()
+    # 调大署名字体
+    win.set_signature_font_size(6)
     sys.exit(app.exec_())
 
 if __name__=="__main__":
