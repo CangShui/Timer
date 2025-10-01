@@ -1,7 +1,7 @@
 # Multi Floating Countdown Timer
 
 A **multi-floating countdown timer** built with **PyQt5** for Windows.  
-Supports multiple independent countdown windows, always-on-top display, and Windows system notification sound when the timer ends. All window positions and sizes are persisted between runs.
+Supports multiple independent countdown windows, always-on-top display, and Windows system notification sound when the timer ends.
 
 ---
 
@@ -19,8 +19,7 @@ Supports multiple independent countdown windows, always-on-top display, and Wind
   Keep track of commonly used countdown times. Double-click to reuse.
 - ✅ **Windows notification sound**  
   Plays system notification when countdown reaches zero.
-- ✅ **No Python environment required**  
-  Can be packaged as a standalone `.exe` using PyInstaller.
+
 
 ---
 
